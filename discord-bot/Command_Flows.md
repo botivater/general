@@ -47,3 +47,23 @@ Examples:
   ```handlebars
   Welcome to {{ guild.name }}, {{ guildMember.nickname }}!
   ```
+  
+### Building block: Add role
+```json
+{
+  "roleId": "",
+}
+```
+
+`roleId`:
+This is the ID of the role to add to the user that reacted.
+
+### Building block: Remove role
+```json
+{
+  "roleId": "",
+}
+```
+
+`roleId`:
+This is the ID of the role to remove from the user that reacted.
