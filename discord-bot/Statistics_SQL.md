@@ -16,7 +16,7 @@ LIMIT 10;
 ## Get the top 10 commands used
 ```sql
 SELECT
-	ci.command_name,
+    ci.command_name,
     COUNT(*) as invocations
 FROM `discord-bot`.command_invocation as ci
 WHERE DATE(ci.created_at) > '2022-02-01' AND DATE(ci.created_at) < '2022-03-01'
