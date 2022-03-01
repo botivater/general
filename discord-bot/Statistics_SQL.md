@@ -12,3 +12,15 @@ GROUP BY guild_member_id
 ORDER BY invocations DESC
 LIMIT 10;
 ```
+
+## Get the top 10 commands used
+```sql
+SELECT
+	ci.command_name,
+    COUNT(*) as invocations
+FROM `discord-bot`.command_invocation as ci
+WHERE DATE(ci.created_at) > '2022-02-01' AND DATE(ci.created_at) < '2022-03-01'
+GROUP BY ci.command_name
+ORDER BY invocations DESC
+LIMIT 10;
+```
